@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VinzCred Soluções Financeiras</title>
+<title>VinzCred | Soluções Financeiras</title>
+
+<meta name="description" content="Correspondente Bancário. FGTS, Consignado, Financiamento Imobiliário, Veicular, Home Equity e Crédito PJ.">
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+
+<header class="header">
 
 <div class="container nav">
 
-<img src="logo.png" class="logo">
+<img src="logo.png" alt="VinzCred" class="logo">
 
 <nav>
-
-<a href="#inicio">Início</a>
-<a href="#produtos">Produtos</a>
-<a href="#quem-sou">Quem Sou</a>
-<a href="#faq">FAQ</a>
-<a href="#contato">Contato</a>
-
+<ul class="menu">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#produtos">Produtos</a></li>
+<li><a href="#sobre">Quem Sou</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
 </nav>
 
-<a class="btn-header" href="https://wa.me/5571983188555" target="_blank">
+<a href="https://wa.me/5571983188555" class="btn-header">
 <i class="fab fa-whatsapp"></i>
 Simular Agora
 </a>
@@ -44,20 +46,24 @@ Simular Agora
 
 </header>
 
+<!-- HERO -->
+
 <section class="hero" id="inicio">
 
 <div class="container hero-grid">
 
 <div class="hero-text">
 
-<div class="tag">
-<i class="fa-solid fa-medal"></i>
-Correspondente Bancário • Atendimento Nacional
+<div class="badge">
+🏅 Correspondente Bancário • Atendimento Nacional
 </div>
 
 <h1>
-Encontre as Melhores Condições
+<span>Encontre as</span>
+Melhores Condições
+<span class="white">
 de Crédito para Você
+</span>
 </h1>
 
 <p>
@@ -66,11 +72,12 @@ Compare ofertas, faça sua simulação online e encontre a melhor solução fina
 
 <div class="hero-buttons">
 
-<a href="https://wa.me/5571983188555" target="_blank" class="btn-gold">
+<a href="https://wa.me/5571983188555" class="btn-primary">
+<i class="fab fa-whatsapp"></i>
 Simular Agora
 </a>
 
-<a href="#produtos" class="btn-outline">
+<a href="#produtos" class="btn-secondary">
 Ver Produtos
 </a>
 
@@ -78,10 +85,25 @@ Ver Produtos
 
 <div class="hero-benefits">
 
-<span>✔ Atendimento Humanizado</span>
-<span>✔ Simulação Gratuita</span>
-<span>✔ Cobertura Nacional</span>
-<span>✔ Processo 100% Online</span>
+<div>
+<i class="fa-regular fa-user"></i>
+Atendimento Humanizado
+</div>
+
+<div>
+<i class="fa-regular fa-square-check"></i>
+Simulação Gratuita
+</div>
+
+<div>
+<i class="fa-solid fa-location-dot"></i>
+Cobertura Nacional
+</div>
+
+<div>
+<i class="fa-solid fa-rotate"></i>
+Processo 100% Online
+</div>
 
 </div>
 
@@ -89,13 +111,15 @@ Ver Produtos
 
 <div class="hero-image">
 
-<img src="foto-diego.jpg">
+<img src="foto-diego.jpg" alt="Diego Vinicius">
 
 </div>
 
 </div>
 
 </section>
+
+<!-- ESTATÍSTICAS -->
 
 <section class="stats">
 
@@ -125,22 +149,71 @@ Ver Produtos
 
 </section>
 
-<section id="produtos" class="produtos">
+<!-- PRODUTOS -->
+
+<section class="produtos" id="produtos">
 
 <div class="container">
 
+<span class="section-tag">
+NOSSOS PRODUTOS
+</span>
+
 <h2>Soluções Financeiras</h2>
+
+<p class="section-subtitle">
+Escolha o produto ideal para sua necessidade.
+</p>
 
 <div class="cards">
 
-<div class="card">Antecipação FGTS</div>
-<div class="card">Consignado INSS</div>
-<div class="card">Consignado CLT</div>
-<div class="card">Servidor Público</div>
-<div class="card">Financiamento Veicular</div>
-<div class="card">Financiamento Imobiliário</div>
-<div class="card">Home Equity</div>
-<div class="card">Crédito PJ</div>
+<div class="card">
+<h3>Antecipação FGTS</h3>
+<p>Receba hoje os valores disponíveis do saque-aniversário.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Consignado INSS</h3>
+<p>Parcelas descontadas diretamente do benefício.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Consignado CLT</h3>
+<p>Crédito para trabalhadores com carteira assinada.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Servidor Público</h3>
+<p>Condições especiais para servidores.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Financiamento Veicular</h3>
+<p>Carros novos e usados com as melhores condições.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Financiamento Imobiliário</h3>
+<p>Realize o sonho da casa própria.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Home Equity</h3>
+<p>Utilize seu imóvel como garantia.</p>
+<a href="#">Simular Agora</a>
+</div>
+
+<div class="card">
+<h3>Crédito PJ</h3>
+<p>Capital de giro e expansão empresarial.</p>
+<a href="#">Simular Agora</a>
+</div>
 
 </div>
 
@@ -148,13 +221,21 @@ Ver Produtos
 
 </section>
 
-<section class="quem-sou" id="quem-sou">
+<!-- SOBRE -->
+
+<section class="sobre" id="sobre">
 
 <div class="container sobre-grid">
 
-<img src="foto-diego.jpg">
+<div>
+<img src="foto-diego.jpg" alt="Diego Vinicius">
+</div>
 
 <div>
+
+<span class="section-tag">
+QUEM SOU
+</span>
 
 <h2>Diego Vinicius</h2>
 
@@ -165,12 +246,10 @@ Especialista em soluções financeiras para pessoas físicas e empresas.
 </p>
 
 <p>
-Atendimento humanizado, transparente e focado nos resultados do cliente.
+Meu compromisso é oferecer orientação clara, as melhores opções de crédito e acompanhamento completo.
 </p>
 
-<a href="https://wa.me/5571983188555"
-class="btn-gold"
-target="_blank">
+<a href="https://wa.me/5571983188555" class="btn-primary">
 Falar Comigo
 </a>
 
@@ -180,42 +259,128 @@ Falar Comigo
 
 </section>
 
-<section id="faq" class="faq">
+<!-- DEPOIMENTOS -->
+
+<section class="depoimentos">
 
 <div class="container">
 
-<h2>Perguntas Frequentes</h2>
+<span class="section-tag">
+DEPOIMENTOS
+</span>
 
-<div class="faq-item">
-<button>
-Quanto custa a simulação?
-</button>
-<p>Gratuita.</p>
+<h2>O que nossos clientes dizem</h2>
+
+<div class="depoimentos-grid">
+
+<div class="depoimento">
+⭐⭐⭐⭐⭐
+<p>
+Atendimento rápido e transparente.
+Consegui antecipar meu FGTS sem burocracia.
+</p>
 </div>
 
-<div class="faq-item">
-<button>
-Atende todo o Brasil?
-</button>
-<p>Sim.</p>
+<div class="depoimento">
+⭐⭐⭐⭐⭐
+<p>
+Recebi todo suporte durante o processo.
+Profissionalismo e atenção.
+</p>
 </div>
 
-<div class="faq-item">
-<button>
-Posso simular mais de um produto?
-</button>
-<p>Sim.</p>
+<div class="depoimento">
+⭐⭐⭐⭐⭐
+<p>
+Simulação simples e resposta rápida.
+Recomendo.
+</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<span class="section-tag">
+PERGUNTAS FREQUENTES
+</span>
+
+<div class="faq-item">
+<button class="faq-question">
+Quanto custa a simulação?
+</button>
+<div class="faq-answer">
+A simulação é totalmente gratuita.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Atendem todo o Brasil?
+</button>
+<div class="faq-answer">
+Sim. Atendimento 100% online para todo o país.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Posso simular mais de um produto?
+</button>
+<div class="faq-answer">
+Sim. Podemos comparar diferentes opções.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+O atendimento é presencial?
+</button>
+<div class="faq-answer">
+Atendimento digital via WhatsApp.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container cta-box">
+
+<div>
+<h2>Pronto para encontrar a melhor solução financeira?</h2>
+<p>
+Faça sua simulação agora mesmo.
+</p>
+</div>
+
+<a href="https://wa.me/5571983188555" class="btn-primary">
+Quero Simular Agora
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer id="contato">
 
 <div class="container">
 
-<img src="logo.png" class="footer-logo">
+<img src="logo.png" alt="VinzCred" class="footer-logo">
 
 <p>(71) 98318-8555</p>
 
