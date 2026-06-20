@@ -1,67 +1,132 @@
-// Scroll suave para links internos
+// ==========================
+// VINZCRED PREMIUM SCRIPT
+// ==========================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    anchor.addEventListener('click', function(e) {
+    // ==========================
+    // HEADER SCROLL EFFECT
+    // ==========================
+    const header = document.querySelector(".header");
 
-        e.preventDefault();
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("header-scroll");
+        } else {
+            header.classList.remove("header-scroll");
+        }
+    });
 
-        const destino = document.querySelector(this.getAttribute('href'));
+    // ==========================
+    // FAQ ACCORDION
+    // ==========================
+    const faqItems = document.querySelectorAll(".faq-item");
 
-        if(destino){
+    faqItems.forEach(item => {
 
-            destino.scrollIntoView({
-                behavior: 'smooth'
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+
+            faqItems.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove("active");
+                }
             });
 
-        }
+            item.classList.toggle("active");
+        });
 
     });
 
-});
+    // ==========================
+    // SCROLL SUAVE MENU
+    // ==========================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-// Header muda ao rolar a página
+        anchor.addEventListener("click", function (e) {
 
-window.addEventListener('scroll', () => {
+            e.preventDefault();
 
-    const header = document.querySelector('header');
+            const target = document.querySelector(this.getAttribute("href"));
 
-    if(window.scrollY > 80){
+            if (target) {
 
-        header.classList.add('header-scroll');
+                window.scrollTo({
+                    top: target.offsetTop - 90,
+                    behavior: "smooth"
+                });
 
-    } else {
+            }
 
-        header.classList.remove('header-scroll');
-
-    }
-
-});
-
-// Revelação dos elementos ao aparecerem
-
-const elementos = document.querySelectorAll(
-'.card, .stat, .sobre-grid, .faq-item'
-);
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add('show');
-
-        }
+        });
 
     });
 
-},{
-    threshold:0.15
+    // ==========================
+    // ANIMAÇÃO AO ENTRAR
+    // ==========================
+    const reveals = document.querySelectorAll(
+        ".card, .testimonial-card, .stats-box, .about-image"
+    );
+
+    const revealOnScroll = () => {
+
+        reveals.forEach(element => {
+
+            const windowHeight = window.innerHeight;
+
+            const revealTop =
+                element.getBoundingClientRect().top;
+
+            if (revealTop < windowHeight - 100) {
+
+                element.classList.add("show");
+
+            }
+
+        });
+
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    revealOnScroll();
+
 });
 
-elementos.forEach(el=>{
-    observer.observe(el);
-});
 
-console.log('VinzCred Premium carregada.');
+// ==========================
+// CONTADOR ESTATÍSTICAS
+// ==========================
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    const updateCounter = () => {
+
+        const target = +counter.getAttribute("data-target");
+
+        const count = +counter.innerText;
+
+        const increment = target / 80;
+
+        if (count < target) {
+
+            counter.innerText =
+                `${Math.ceil(count + increment)}`;
+
+            setTimeout(updateCounter, 20);
+
+        } else {
+
+            counter.innerText = target;
+
+        }
+
+    };
+
+    updateCounter();
+
+});
